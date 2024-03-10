@@ -1,0 +1,13 @@
+.image {
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+}
+
+.image img {
+    border-radius: 15px;
+    width: 100%;
+    aspect-ratio: 1;
+}
