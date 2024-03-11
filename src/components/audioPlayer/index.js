@@ -13,7 +13,7 @@ export default function AudioPlayer({ currentTrack, currentIndex, setCurrentInde
     const isReady = useRef(false);
     const { duration } = audioRef.current;
     const currentPercentage = duration ? (trackProgress / duration) * 100 : 0;
-    var playing = audioRef.current.currentTime > 0 && !audioRef.current.paused && !audioRef.current.ended && audioRef.current.readyState > 0;
+
     const startTimer = () => {
         clearInterval(intervalRef.current);
         intervalRef.current = setInterval(() => {
@@ -33,10 +33,8 @@ export default function AudioPlayer({ currentTrack, currentIndex, setCurrentInde
     useEffect(() => {
         if (audioRef.current.src) {
             if(isPlaying) {
-                if(!playing) {
-                    audioRef.current.play();
-                    startTimer();
-                }
+                audioRef.current.play();
+                startTimer();
             } else {
                 clearInterval(intervalRef.current);
                 audioRef.current.pause();
@@ -44,10 +42,8 @@ export default function AudioPlayer({ currentTrack, currentIndex, setCurrentInde
         } else {
             if(isPlaying) {
                 audioRef.current = new Audio(audioSource);
-                if (!playing) {
-                    audioRef.current.play();
-                    startTimer();
-                }
+                audioRef.current.play();
+                startTimer();
             } else {
                 clearInterval(intervalRef.current);
                 audioRef.current.pause();
@@ -60,11 +56,9 @@ export default function AudioPlayer({ currentTrack, currentIndex, setCurrentInde
         audioRef.current = new Audio(audioSource);
         setTrackProgress(audioRef.currentTime);
         if(isReady.current) {
-            if (!playing) {
-                audioRef.current.play();
-                setIsPlaying(true);
-                startTimer();
-            }
+            audioRef.current.play();
+            setIsPlaying(true);
+            startTimer();
         } else {
             isReady.current = true;
         }

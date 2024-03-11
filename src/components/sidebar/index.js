@@ -15,6 +15,11 @@ export default function Sidebar() {
       setImage(response.data.images[0].url);})
   },[])
 
+  const logout = () => {
+    window.localStorage.removeItem("token");
+    window.location.reload();
+  }
+
   return (
     <div className="container-sidebar">
       <img src={image} className="image-profile" alt="Profile"></img>
@@ -24,7 +29,7 @@ export default function Sidebar() {
         <SidebarButton title="Favorites" to="/favorites" icon={<FaHeart />} />
         <SidebarButton title="Library" to="/library" icon={<IoLibrary />} />
       </div>
-      <SidebarButton title="Sign Out" to="" icon={<PiSignOutBold />} />
+      <p onClick={logout}><SidebarButton title="Sign Out" to="" icon={<PiSignOutBold />} /></p>
     </div>
   )
   }
