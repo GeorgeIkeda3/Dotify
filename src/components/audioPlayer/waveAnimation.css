@@ -1,0 +1,98 @@
+.box-container {
+    justify-content: space-between;
+    height: 50px;
+    --boxSize: 4px;
+    --gutter: 8px;
+    width: calc(var(--boxSize) + var(--gutter) * 19);
+}
+
+.box {
+    transform: scale(0.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: white;
+    border-radius: 15px;
+}
+
+.box.active {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box1 {
+    animation-name: wave1;
+}
+
+.box2 {
+    animation-name: wave2;
+}
+
+.box3 {
+    animation-name: wave3;
+}
+
+.box4 {
+    animation-name: wave2;
+}
+
+.box5 {
+    animation-name: wave3;
+}
+
+.box6 {
+    animation-name: wave1;
+}
+
+.box7 {
+    animation-name: wave3;
+}
+
+.box8 {
+    animation-name: wave2;
+}
+
+.box9 {
+    animation-name: wave3;
+}
+
+.box10 {
+    animation-name: wave1;
+}
+
+@keyframes wave1 {
+    25% {
+        transform: scale(0.6);
+    }
+    50% {
+        transform: scale(0.4);
+    }
+    75% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes wave2 {
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.4);
+    }
+    75% {
+        transform: scale(0.6);
+    }
+}
+
+@keyframes wave3 {
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.4);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+}
+

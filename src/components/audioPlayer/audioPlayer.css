@@ -9,5 +9,44 @@
 }
 
 .right-player {
-    width: 60%
+    width: 60%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.song-title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0px;
+    color: skyblue;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.song-artist {
+    color: lightblue;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.player-right-bottom {
+    width: 100%;
+    align-items: center;
+    flex-direction:  column;
+}
+
+.song-duration {
+    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.duration {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0px;
+    color: lightblue;
 }
