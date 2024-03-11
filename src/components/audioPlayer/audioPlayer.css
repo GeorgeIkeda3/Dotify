@@ -1,0 +1,13 @@
+.body-player {
+    width: 100%;
+    height: 45%;
+    margin: 3% 0%;
+}
+
+.left-player {
+    width: 40%
+}
+
+.right-player {
+    width: 60%
+}

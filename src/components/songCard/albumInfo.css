@@ -1,0 +1,32 @@
+.info-card {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.info-card p {
+    margin: 0px !important
+}
+
+.albumName {
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: bold;
+    color: skyblue;
+}
+
+.scroll {
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(-100%);
+    }
+}   

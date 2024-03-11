@@ -4,7 +4,7 @@ import AlbumInfo from "./albumInfo";
 import "./songCard.css";
 
 export default function SongCard({ album }) {
-    return <div className="body flex">
+    return <div className="body-card flex">
         <AlbumImage url={album?.images[0]?.url} />
         <AlbumInfo album={album} />
     </div>

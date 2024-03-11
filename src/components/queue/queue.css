@@ -1,0 +1,52 @@
+.queue-container {
+    width: 100%;
+    height: 35%;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    background-color: darkblue;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.queue {
+    color: skyblue;
+    font-size: 12px;
+    height: 85%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.next {
+    font-size: 14px;
+    font-weight: bold;
+    color: skyblue;
+    text-align: left;
+}
+
+.queue-list {
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+    cursor: pointer;
+
+}
+
+.track-name:hover {
+    transform: scale(0.9);
+}
+
+.queue-list p {
+    margin: 0px;
+}
+
+.queue-list::-webkit-scrollbar {
+    display: none;
+}
+
+.track-name {
+    width: 75%;
+    margin: 0px;
+    text-overflow: ellipsis;
+}

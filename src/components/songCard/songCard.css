@@ -1,6 +1,10 @@
-.body {
+.body-card {
     width: 100%;
-    height: 65%;
+    height: 60%;
     border-radius: 15px;
+    border-bottom-right-radius: 0px;
     background-color: darkblue;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

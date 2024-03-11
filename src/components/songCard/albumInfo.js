@@ -2,16 +2,16 @@ import React from 'react';
 import "./albumInfo.css";
 
 export default function AlbumInfo({ album }) {
-    console.log(album);
-    return <div>
+    const artists = [];
+    album?.artists?.forEach(element => {
+        artists.push(element.name);
+    });
+
+    return <div className="info-card">
         <div className="albumName">
-            <p></p>
-        </div>
-        <div className="info">
-            <p></p>
-        </div>
-        <div className="release">
-            <p></p>
+            <div className="scroll">
+                <p>{album?.name + " - " + artists?.join(", ")}</p>
+            </div>
         </div>
     </div>;
 }

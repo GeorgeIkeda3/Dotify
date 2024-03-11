@@ -23,10 +23,10 @@ export default function Library() {
 
     return (
         <div className="screen-container">
-            <div className="body">
+            <div className="body-library">
                 {playlists?.map((playlist) => (
                     <div className="cards" key={playlist.id} onClick={() => playPlaylist(playlist.id)}>
-                        <img src={playlist.images[0].url} className="image" alt="Albums" />
+                        <img src={playlist.images[0].url} className="image-card" alt="Albums" />
                         <p className="title">{playlist.name}</p>
                         <p className="subtitle">{playlist.tracks.total} songs</p>
                         <div className="button">
