@@ -52,7 +52,7 @@ export default function AudioPlayer({ currentTrack, currentIndex, setCurrentInde
                 clearInterval(intervalRef.current);
                 audioRef.current.pause();
             }
-        }
+        }  // eslint-disable-next-line
     }, [isPlaying])
 
     useEffect(() => {
@@ -67,7 +67,7 @@ export default function AudioPlayer({ currentTrack, currentIndex, setCurrentInde
             }
         } else {
             isReady.current = true;
-        }
+        }  // eslint-disable-next-line
     }, [currentIndex]);
 
     useEffect(() => {
